@@ -1,0 +1,23 @@
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+
+public class InvertrMap21 {
+    public static void main(String[] args) {
+        HashMap<String, Integer> studentScore = new HashMap<>();
+        studentScore.put("Aida", 90);
+        studentScore.put("Azat", 85);
+        studentScore.put("Dana", 90);
+        studentScore.put("Mira", 85);
+
+        HashMap<Integer, ArrayList<String>> scoreStudents = new HashMap<>();
+
+        for (Map.Entry<String, Integer> e : studentScore.entrySet()) {
+            scoreStudents
+                    .computeIfAbsent(e.getValue(), k -> new ArrayList<>())
+                    .add(e.getKey());
+        }
+
+        System.out.println(scoreStudents);
+    }
+}
