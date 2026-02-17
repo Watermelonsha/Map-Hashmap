@@ -1,0 +1,19 @@
+import java.util.HashMap;
+
+public class Equals18 {
+    public static void main(String[] args) {
+        HashMap<String, Integer> map1 = new HashMap<>();
+        map1.put("Alia", 85);
+        map1.put("Davlet", 90);
+        map1.put("Shukasha", 80);
+
+        HashMap<String, Integer> map2 = new HashMap<>();
+        map2.put("Shukasha", 80);
+        map2.put("Alia", 85);
+        map2.put("Davlet", 90);
+
+        System.out.println(map1.equals(map2)); // true
+        System.out.println(map1.hashCode());
+        System.out.println(map2.hashCode());
+    }
+}
