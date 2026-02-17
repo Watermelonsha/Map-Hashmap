@@ -1,0 +1,14 @@
+import java.util.HashMap;
+
+public class RemoveKey4 {
+    public static void main(String[] args) {
+        HashMap<String, Integer> scores = new HashMap<>();
+        scores.put("Azat", 92);
+
+        Integer removed = scores.remove("Azat");
+        System.out.println("Azat removed? " + (removed != null));
+
+        Integer removed2 = scores.remove("NonExisting");
+        System.out.println("NonExisting removed? " + (removed2 != null));
+    }
+}
