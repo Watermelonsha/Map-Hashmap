@@ -1,0 +1,24 @@
+import java.util.HashMap;
+
+public class getOrDefault6 {
+
+    public static void main(String[] args) {
+        HashMap<String, Integer> scores = new HashMap<>();
+        scores.put("Aida", 90);
+        scores.put("Dana", 88);
+
+        printScore(scores, "Aida");
+        printScore(scores, "Mira");
+        printScore(scores, "Dana");
+    }
+
+    static void printScore(HashMap<String, Integer> map, String name) {
+        int score = map.getOrDefault(name, -1);
+
+        if (score == -1) {
+            System.out.println(name + ": Not found");
+        } else {
+            System.out.println(name + ": " + score);
+        }
+    }
+}
