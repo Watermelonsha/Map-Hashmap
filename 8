@@ -1,0 +1,18 @@
+import java.util.HashMap;
+
+public class replace8 {
+    public static void main(String[] args) {
+        HashMap<String, Integer> scores = new HashMap<>();
+        scores.put("Aida", 85);
+
+        boolean replaced = scores.replace("Aida", 85, 86);
+        System.out.println("Conditional replace success? " + replaced);
+        System.out.println(scores);
+
+        scores.replace("Aida", 91);
+        System.out.println(scores);
+
+        Integer result = scores.replace("Mira", 80);
+        System.out.println("Replace missing key result: " + result);
+    }
+}
