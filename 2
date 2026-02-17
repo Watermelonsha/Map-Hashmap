@@ -1,0 +1,22 @@
+import java.util.HashMap;
+
+public class GetContains2 {
+    public static void main(String[] args) {
+        HashMap<String, Integer> map = new HashMap<>();
+
+        map.put("Aida", 19 );
+        map.put("Azat",27 );
+
+        if (map.containsKey("Aida")) {
+            System.out.println("Found Aida: " + map.get("Aida"));
+        } else {
+            System.out.println("Aida not found in the map.");
+        }
+
+        if (map.containsKey("Mira")) {
+            System.out.println("Found Mira: " + map.get("Mira"));
+        } else {
+            System.out.println("Mira not found in the map.");
+        }
+    }
+}
