@@ -1,0 +1,13 @@
+import java.util.HashMap;
+
+public class pultIfAbsent7 {
+    public static void main(String[] args) {
+        HashMap<String, Integer> scores = new HashMap<>();
+        scores.put("Aida", 85);
+
+        scores.putIfAbsent("Aida", 90);
+        scores.putIfAbsent("Mira", 88);
+
+        System.out.println(scores);
+    }
+}
