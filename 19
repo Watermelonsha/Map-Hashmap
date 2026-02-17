@@ -1,0 +1,24 @@
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+
+public class RemoveE19 {
+    public static void main(String[] args) {
+        HashMap<String, Integer> scores = new HashMap<>();
+        scores.put("Aida", 85);
+        scores.put("Azat", 55);
+        scores.put("Dana", 40);
+        scores.put("Mira", 90);
+
+        Iterator<Map.Entry<String, Integer>> it = scores.entrySet().iterator();
+
+        while (it.hasNext()) {
+            Map.Entry<String, Integer> e = it.next();
+            if (e.getValue() < 60) {
+                it.remove();
+            }
+        }
+
+        System.out.println(scores);
+    }
+}
