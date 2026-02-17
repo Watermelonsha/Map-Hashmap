@@ -1,0 +1,14 @@
+import java.util.ArrayList;
+import java.util.HashMap;
+
+public class GroupWords14 {
+    public static void main(String[] args) {
+        String[] words = {"hi", "book", "java", "sun", "loop", "map"};
+        HashMap<Integer, ArrayList<String>> map = new HashMap<>();
+
+        for (String w : words) {
+            map.computeIfAbsent(w.length(), k -> new ArrayList<>()).add(w);
+        }
+        System.out.println(map);
+    }
+}
