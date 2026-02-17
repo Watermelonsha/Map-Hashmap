@@ -1,0 +1,14 @@
+import java.util.HashMap;
+
+public class UpdateV3 {
+    public static void main(String[] args) {
+        HashMap<String, Integer> scores = new HashMap<>();
+         scores.put("Dana", 50);
+
+         Integer oldScore = scores.put("Dana", 80);
+
+         System.out.println("Old score: " + oldScore);
+         System.out.println("New map: " + scores);
+
+    }
+}
