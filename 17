@@ -1,0 +1,26 @@
+import java.util.HashMap;
+import java.util.Map;
+
+public class DetectD17 {
+    public static void main(String[] args) {
+        String[] items = {"apple", "banana", "apple", "orange", "banana", "kiwi"};
+        HashMap<String, Integer> map = new HashMap<>();
+
+        for (String item : items) {
+            map.put(item, map.getOrDefault(item, 0) + 1);
+        }
+
+        System.out.println("Unique items:");
+        for (Map.Entry<String, Integer> e : map.entrySet()) {
+            if (e.getValue() == 1) {
+                System.out.println(e.getKey());
+            }
+        }
+        System.out.println("Duplicated items:");
+        for (Map.Entry<String, Integer> e : map.entrySet()) {
+            if (e.getValue() > 1) {
+                System.out.println(e.getKey() + " = " + e.getValue());
+            }
+        }
+    }
+}
